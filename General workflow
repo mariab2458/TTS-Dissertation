@@ -1,0 +1,9 @@
+ssh dialpad
+nano sentences.txt
+conda activate elevenlabs
+cd elevenlabs
+nano generate_elevenlabs.py # if necessary to modify the language
+python generate_elevenlabs.py
+logout
+cd elevenlabs/outputs/EN-ES
+scp dialpad:~/elevenlabs/outputs/\*.mp3 . # or .wav
