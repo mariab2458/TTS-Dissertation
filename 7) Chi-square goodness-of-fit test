@@ -1,0 +1,16 @@
+import numpy as np
+from scipy.stats import chisquare
+import math
+
+table = np.array([2671, 929])
+
+chi2, p = chisquare(table)
+N = table.sum()
+dof = len(table) - 1
+cohens_w = math.sqrt(chi2 / N)
+
+print("Chi-square:", chi2)
+print("Degree of freedom:", dof)
+print("N:", N)
+print("p-value:", p)
+print("Cohen's W:", cohens_w)
